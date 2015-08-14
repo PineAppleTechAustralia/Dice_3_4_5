@@ -16,6 +16,7 @@
 		4CB6B5B21B7D7CBF004A7C3E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6B5B11B7D7CBF004A7C3E /* Images.xcassets */; };
 		4CB6B5B51B7D8571004A7C3E /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B5B41B7D8571004A7C3E /* Dice.m */; };
 		4CB6B5B81B7D9346004A7C3E /* DiceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B5B71B7D9346004A7C3E /* DiceHolder.m */; };
+		4CB6B5BB1B7DB441004A7C3E /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B5BA1B7DB441004A7C3E /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		4CB6B5B41B7D8571004A7C3E /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		4CB6B5B61B7D9346004A7C3E /* DiceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiceHolder.h; sourceTree = "<group>"; };
 		4CB6B5B71B7D9346004A7C3E /* DiceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiceHolder.m; sourceTree = "<group>"; };
+		4CB6B5B91B7DB441004A7C3E /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		4CB6B5BA1B7DB441004A7C3E /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				4CB6B5921B7D6A90004A7C3E /* ViewController.h */,
 				4CB6B5931B7D6A90004A7C3E /* ViewController.m */,
 				4CB6B5951B7D6A90004A7C3E /* Main.storyboard */,
+				4CB6B5B91B7DB441004A7C3E /* SettingViewController.h */,
+				4CB6B5BA1B7DB441004A7C3E /* SettingViewController.m */,
 				4CB6B59A1B7D6A90004A7C3E /* LaunchScreen.xib */,
 				4CB6B58B1B7D6A90004A7C3E /* Supporting Files */,
 				4CB6B5B31B7D8571004A7C3E /* Dice.h */,
@@ -234,6 +239,7 @@
 				4CB6B5B51B7D8571004A7C3E /* Dice.m in Sources */,
 				4CB6B58E1B7D6A90004A7C3E /* main.m in Sources */,
 				4CB6B5B81B7D9346004A7C3E /* DiceHolder.m in Sources */,
+				4CB6B5BB1B7DB441004A7C3E /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
