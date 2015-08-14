@@ -17,13 +17,19 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *totalDiceNumber;
 
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
+    internal_no_of_dice = 2;
+    internal_color = @"DICE3";
+    
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,10 +92,119 @@
     
 }
 
+- (IBAction)performRolling:(UIButton *)sender {
+    
+    
+    [self performRoll];
+    
+    
+}
 
 
 
-
+- (void) performRoll
+{
+    int d = 93; //distance of diagonal
+    int d_half = 47;
+    
+    //Remove all previous dice
+    for (DiceHolder *previousDicesHolders in [self.view subviews]) {
+        if ([previousDicesHolders class] == [DiceHolder class])
+            [previousDicesHolders removeFromSuperview];
+        
+    }
+    
+    NSMutableArray *diceData = [[NSMutableArray alloc] init];
+    
+    //Iterate for all individual dice
+    for (int i = 0;i<internal_no_of_dice;i++)
+    {
+        NSNumber *randomNumber = [[NSNumber alloc] initWithInt:((int)arc4random_uniform(6)+1)];
+        
+        NSMutableArray *tempEachDice = [[NSMutableArray alloc] init];
+        
+        [tempEachDice insertObject:randomNumber atIndex:0]; //Value of Dice is 0th position
+        
+        //Now calculate new positions
+        int newPossibleX;
+        int newPossibleY;
+        BOOL flag = YES;
+        do {
+            
+            newPossibleX = d_half + arc4random_uniform(320-d);//66);
+            newPossibleY = d_half + arc4random_uniform(460 - d - (int)rollButton.frame.size.height);
+            
+            
+            //Check if newPossibleX and newPossibleY are too close to other dice positions
+            for (int y = 0; y<i; y++)
+            {
+                int checkX = [(NSNumber *)[[diceData objectAtIndex:y] objectAtIndex:1] intValue];
+                int checkY = [(NSNumber *)[[diceData objectAtIndex:y] objectAtIndex:2] intValue];
+                
+                if ( ( ((newPossibleX - checkX)*(newPossibleX - checkX)) + ((newPossibleY - checkY)*(newPossibleY - checkY)) ) <=  (d*d) )
+                {
+                    //Too close
+                    flag = NO;
+                    break;
+                }
+                else
+                {
+                    flag = YES;
+                }
+            }
+        } while (flag==NO);
+        
+        //Store new approved position values
+        NSNumber *randomX = [[NSNumber alloc] initWithInt:(newPossibleX)];
+        NSNumber *randomY = [[NSNumber alloc] initWithInt:(newPossibleY)];
+        
+        [tempEachDice insertObject:randomX atIndex:1];
+        [tempEachDice insertObject:randomY atIndex:2];
+        
+        [diceData insertObject:tempEachDice atIndex:i];
+        
+    }
+    
+//    //Play Sound
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Roll" ofType:@"mp3"];
+//    SystemSoundID soundID;
+//    AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)[NSURL fileURLWithPath:path], &soundID);
+//    AudioServicesPlaySystemSound(soundID);
+    
+    int total = 0;
+    //Place all dice in the same location
+    for (int t = 0; t < internal_no_of_dice; t++)
+    {
+       
+        //Add up totals
+        total = total + [(NSNumber *)[[diceData objectAtIndex:t] objectAtIndex:0] intValue];
+        
+        
+        //Create temp dice
+        DiceHolder *tempDice = [[DiceHolder alloc] initWithColor:internal_color withNumber:[[diceData objectAtIndex:t] objectAtIndex:0]];
+      
+        [self.view addSubview:tempDice];
+     
+        
+        //tempDice.frame = CGRectMake(self.view.frame.size.width,self.view.frame.size.height/2,66,66);
+        
+        tempDice.frame = CGRectMake([(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:1] intValue], [(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:2] intValue], 66, 66);
+        
+        //animation
+        
+//        [UIImageView animateWithDuration:.5
+//                              animations:^{
+//                                  CGAffineTransform rotate = CGAffineTransformMakeRotation ((arc4random_uniform(1.75*3.14159)+0.25*3.14159));//(7)+0.5));
+//                                  tempDice.transform = 	rotate;
+//                                  
+//                                  tempDice.center = CGPointMake([(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:1] intValue], [(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:2] intValue]);
+//                              }
+//                              completion:NULL];
+        
+    }
+    
+    self.totalLabel.text = [[NSString alloc] initWithFormat:@"Total: %u", total];
+}
 
 
 

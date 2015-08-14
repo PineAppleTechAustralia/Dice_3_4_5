@@ -16,35 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pd-C3-s3Q">
-                                <rect key="frame" x="154" y="148" width="66" height="66"/>
-                                <state key="normal" image="1" backgroundImage="DICE3">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="diceRoll:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gcG-6E-94W"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-Fz-Sk5">
-                                <rect key="frame" x="154" y="277" width="66" height="66"/>
-                                <state key="normal" image="2" backgroundImage="DICE3">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUn-02-Z1w">
-                                <rect key="frame" x="156" y="484" width="62" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5a-UJ-CjE">
+                                <rect key="frame" x="135" y="637" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Roll">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="rollingDice:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KLc-ZH-kJe"/>
+                                    <action selector="performRolling:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Eq-3J-vGK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2J-g8-TqR">
-                                <rect key="frame" x="154" y="409" width="111" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbP-pw-YLC">
+                                <rect key="frame" x="263" y="644" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -53,10 +38,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="FirstDice" destination="5pd-C3-s3Q" id="IBU-4q-MIc"/>
-                        <outlet property="firstDice" destination="5pd-C3-s3Q" id="gFG-ei-Tr1"/>
-                        <outlet property="secondDice" destination="tTb-Fz-Sk5" id="SJC-ZV-rNq"/>
-                        <outlet property="totalDiceNumber" destination="b2J-g8-TqR" id="aEB-ht-EhU"/>
+                        <outlet property="rollButton" destination="D5a-UJ-CjE" id="YhT-ID-oaw"/>
+                        <outlet property="totalLabel" destination="NbP-pw-YLC" id="Ufa-lf-EO1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -64,9 +47,4 @@
             <point key="canvasLocation" x="1000.5" y="236.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="1" width="66" height="66"/>
-        <image name="2" width="66" height="66"/>
-        <image name="DICE3" width="66" height="66"/>
-    </resources>
 </document>
