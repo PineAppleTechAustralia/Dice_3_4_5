@@ -186,20 +186,20 @@
         [self.view addSubview:tempDice];
      
         
-        //tempDice.frame = CGRectMake(self.view.frame.size.width,self.view.frame.size.height/2,66,66);
+        tempDice.frame = CGRectMake(self.view.frame.size.width,self.view.frame.size.height/2,66,66);
         
-        tempDice.frame = CGRectMake([(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:1] intValue], [(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:2] intValue], 66, 66);
+        //tempDice.frame = CGRectMake([(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:1] intValue], [(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:2] intValue], 66, 66);
         
         //animation
         
-//        [UIImageView animateWithDuration:.5
-//                              animations:^{
-//                                  CGAffineTransform rotate = CGAffineTransformMakeRotation ((arc4random_uniform(1.75*3.14159)+0.25*3.14159));//(7)+0.5));
-//                                  tempDice.transform = 	rotate;
-//                                  
-//                                  tempDice.center = CGPointMake([(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:1] intValue], [(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:2] intValue]);
-//                              }
-//                              completion:NULL];
+        [UIImageView animateWithDuration:.5
+                              animations:^{
+                                  CGAffineTransform rotate = CGAffineTransformMakeRotation ((arc4random_uniform(1.75*3.14159)+0.25*3.14159));//(7)+0.5));
+                                  tempDice.transform = 	rotate;
+                                  
+                                  tempDice.center = CGPointMake([(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:1] intValue], [(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:2] intValue]);
+                              }
+                              completion:NULL];
         
     }
     
