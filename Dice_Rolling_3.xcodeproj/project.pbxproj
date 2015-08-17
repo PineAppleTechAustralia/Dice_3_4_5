@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C412FE01B81B61300705FE7 /* Roll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C412FDF1B81B61300705FE7 /* Roll.mp3 */; };
 		4CB6B58E1B7D6A90004A7C3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B58D1B7D6A90004A7C3E /* main.m */; };
 		4CB6B5911B7D6A90004A7C3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B5901B7D6A90004A7C3E /* AppDelegate.m */; };
 		4CB6B5941B7D6A90004A7C3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B5931B7D6A90004A7C3E /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C412FDF1B81B61300705FE7 /* Roll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Roll.mp3; path = ../../../../Desktop/Roll.mp3; sourceTree = "<group>"; };
 		4CB6B5881B7D6A90004A7C3E /* Dice_Rolling_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice_Rolling_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6B58C1B7D6A90004A7C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CB6B58D1B7D6A90004A7C3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		4CB6B58A1B7D6A90004A7C3E /* Dice_Rolling_3 */ = {
 			isa = PBXGroup;
 			children = (
+				4C412FDF1B81B61300705FE7 /* Roll.mp3 */,
 				4CB6B58F1B7D6A90004A7C3E /* AppDelegate.h */,
 				4CB6B5901B7D6A90004A7C3E /* AppDelegate.m */,
 				4CB6B5B11B7D7CBF004A7C3E /* Images.xcassets */,
@@ -217,6 +220,7 @@
 				4CB6B5B21B7D7CBF004A7C3E /* Images.xcassets in Resources */,
 				4CB6B5971B7D6A90004A7C3E /* Main.storyboard in Resources */,
 				4CB6B59C1B7D6A90004A7C3E /* LaunchScreen.xib in Resources */,
+				4C412FE01B81B61300705FE7 /* Roll.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +442,7 @@
 				4CB6B5AD1B7D6A90004A7C3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CB6B5AE1B7D6A90004A7C3E /* Build configuration list for PBXNativeTarget "Dice_Rolling_3Tests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +451,7 @@
 				4CB6B5B01B7D6A90004A7C3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

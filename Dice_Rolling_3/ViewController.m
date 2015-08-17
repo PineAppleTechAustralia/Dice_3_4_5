@@ -138,7 +138,7 @@
         do {
             
             newPossibleX = d_half + arc4random_uniform(320-d);//66);
-            newPossibleY = d_half + arc4random_uniform(460 - d - (int)rollButton.frame.size.height);
+            newPossibleY = d_half + arc4random_uniform(660 - d - (int)rollButton.frame.size.height);
             
             
             //Check if newPossibleX and newPossibleY are too close to other dice positions
@@ -171,11 +171,11 @@
         
     }
     
-//    //Play Sound
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Roll" ofType:@"mp3"];
-//    SystemSoundID soundID;
-//    AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)[NSURL fileURLWithPath:path], &soundID);
-//    AudioServicesPlaySystemSound(soundID);
+    //Play Sound
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Roll" ofType:@"mp3"];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)[NSURL fileURLWithPath:path], &soundID);
+    AudioServicesPlaySystemSound(soundID);
     
     int total = 0;
     //Place all dice in the same location
