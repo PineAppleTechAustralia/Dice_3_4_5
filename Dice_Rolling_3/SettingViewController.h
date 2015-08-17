@@ -8,12 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingViewController : UIViewController
+
+@class SettingViewController;
+
+@protocol SettingViewControllerDelegate<NSObject>
+
+@required
+- (void)settingsDidFinish:(SettingViewController *)mvc numberOfDice:(NSInteger)nod colorOfDice:(NSString *)cod;
+
+@end
+
+
+
+
+@interface SettingViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 {
     int tapCount;
 
 }
 
+@property (weak) id<SettingViewControllerDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *numOfDice;
 

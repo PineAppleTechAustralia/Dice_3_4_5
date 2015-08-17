@@ -22,7 +22,6 @@
 -(id)initWithColor:(NSString *)m_color withNumber:(NSNumber *)m_number
 {
     self = [super init];
-    NSLog(@"10");
     if(self){
         //create an object
         Dice *dice = [[Dice alloc] init];

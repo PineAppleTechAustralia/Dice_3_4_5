@@ -29,6 +29,7 @@
     internal_no_of_dice = 2;
     internal_color = @"DICE3";
     
+    
     [super viewDidLoad];
 }
 
@@ -92,12 +93,17 @@
     
 }
 
-- (IBAction)performRolling:(UIButton *)sender {
-    
-    
-    [self performRoll];
-    
-    
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"settingsSegue"])
+    {
+        
+        [segue.destinationViewController setDelegate:self];
+        
+    }
+
 }
 
 
@@ -208,13 +214,37 @@
 
 
 
+#pragma mark - settings
+- (void)settingsDidFinish:(SettingViewController *)mvc numberOfDice:(NSInteger)nod colorOfDice:(NSString *)cod
+{
+    
+    //Change Internal Settings
+    internal_no_of_dice = nod;
+    internal_color = cod;
+    
+    //Dismiss Setting Window
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 
+//- (IBAction)settingsPushed:(id)sender {
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+//    SettingViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"AddNote"];
+//    vc.delegate = self;
+//    [self presentViewController:vc animated:YES completion:nil];
+//    
+//}
 
 
 
-
+- (IBAction)performRolling:(UIButton *)sender {
+    
+    
+    [self performRoll];
+    
+    
+}
 
 
 

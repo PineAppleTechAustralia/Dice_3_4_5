@@ -35,11 +35,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1f9-HQ-VMh" kind="show" id="sYK-MN-Dba"/>
+                                    <segue destination="1f9-HQ-VMh" kind="show" identifier="settingsSegue" id="sYK-MN-Dba"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbP-pw-YLC">
-                                <rect key="frame" x="270" y="641" width="63" height="21"/>
+                                <rect key="frame" x="270" y="641" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                                     <navigationItem title="Settings" id="PkQ-ej-fut">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="CXj-Gv-Imi">
                                             <connections>
-                                                <action selector="finishSetting:" destination="1f9-HQ-VMh" id="mfz-QS-K2c"/>
+                                                <action selector="finishSetting:" destination="1f9-HQ-VMh" id="cWk-dh-nFp"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

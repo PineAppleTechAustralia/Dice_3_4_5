@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "DiceHolder.h"
+#import "SettingViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <SettingViewControllerDelegate>
 {
     @public
-        int internal_no_of_dice;
+        NSInteger internal_no_of_dice;
         NSString *internal_color;
 
         BOOL internal_roll_at_once;
