@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingViewController : UIViewController
+{
+    int tapCount;
+
+}
 
 
 @property (weak, nonatomic) IBOutlet UILabel *numOfDice;
@@ -17,12 +21,16 @@
 @property (weak, nonatomic) IBOutlet UISlider *diceNumber;
 
 
+@property (weak, nonatomic) IBOutlet UIPickerView *colorPicker;
+
+
 
 
 - (IBAction)finishSetting:(id)sender;
 
-- (IBAction)silderChanged:(id)sender;
+//- (IBAction)sliderChanged:(UIGestureRecognizer *) g;
 
+- (IBAction)sliderChanged:(id) sender;
 
 
 

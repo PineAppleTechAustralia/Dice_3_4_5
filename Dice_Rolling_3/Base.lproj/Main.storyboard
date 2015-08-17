@@ -100,14 +100,18 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c5H-ho-2Gy">
                                 <rect key="frame" x="22" y="169" width="339" height="31"/>
                                 <connections>
-                                    <action selector="silderChanged:" destination="1f9-HQ-VMh" eventType="valueChanged" id="NKy-co-OQg"/>
+                                    <action selector="sliderChanged:" destination="1f9-HQ-VMh" eventType="valueChanged" id="Fed-kP-GCp"/>
                                 </connections>
                             </slider>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHG-g4-Dhj">
+                                <rect key="frame" x="70" y="279" width="234" height="154"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="colorPicker" destination="GHG-g4-Dhj" id="qn2-Kk-71C"/>
                         <outlet property="diceNumber" destination="c5H-ho-2Gy" id="EFt-D1-Vts"/>
                         <outlet property="numOfDice" destination="Df6-bP-Q1z" id="FNx-Uu-iAB"/>
                     </connections>
