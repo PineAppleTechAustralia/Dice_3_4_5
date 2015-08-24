@@ -14,7 +14,7 @@
 @protocol SettingViewControllerDelegate<NSObject>
 
 @required
-- (void)settingsDidFinish:(SettingViewController *)mvc numberOfDice:(NSInteger)nod colorOfDice:(NSString *)cod;
+- (void)settingsDidFinishWithNumberOfDice: (NSInteger)nod colorOfDice:(NSString *)cod;
 
 @end
 

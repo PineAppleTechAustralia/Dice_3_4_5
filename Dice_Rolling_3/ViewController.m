@@ -33,10 +33,6 @@
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 //random number, string format, switch
 
@@ -205,7 +201,7 @@
                                   
                                   tempDice.center = CGPointMake([(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:1] intValue], [(NSNumber *)[[diceData objectAtIndex:t]objectAtIndex:2] intValue]);
                               }
-                              completion:NULL];
+                              completion:nil];
         
     }
     
@@ -215,7 +211,7 @@
 
 
 #pragma mark - settings
-- (void)settingsDidFinish:(SettingViewController *)mvc numberOfDice:(NSInteger)nod colorOfDice:(NSString *)cod
+- (void)settingsDidFinishWithNumberOfDice: (NSInteger)nod colorOfDice:(NSString *)cod;
 {
     
     //Change Internal Settings

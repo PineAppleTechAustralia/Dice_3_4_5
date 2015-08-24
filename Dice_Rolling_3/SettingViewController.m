@@ -74,12 +74,6 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    
-       [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 #pragma mark - picker view delegate
 
@@ -130,8 +124,8 @@
     color = [_pickerData objectAtIndex:rowNumber];
     
     
-    if ( [self.delegate respondsToSelector: @selector(settingsDidFinish:numberOfDice:colorOfDice:)]) {
-        [self.delegate settingsDidFinish:self numberOfDice:val colorOfDice:color];
+    if ( [self.delegate respondsToSelector: @selector(settingsDidFinishWithNumberOfDice:colorOfDice:)]) {
+        [self.delegate settingsDidFinishWithNumberOfDice: val colorOfDice:color];
     }
 
     //[self.delegate settingsDidFinish:self numberOfDice:val1 colorOfDice:color];
