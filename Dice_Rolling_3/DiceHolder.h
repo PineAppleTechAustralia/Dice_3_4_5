@@ -14,7 +14,6 @@
 @property (strong, nonatomic) UIImageView *fg;
 @property (strong, nonatomic) UIImageView *bg;
 
-//@property (strong, nonatomic) Dice *dice;
 
 -(id)initWithColor:(NSString *)m_color withNumber:(NSNumber *)m_number;
 

@@ -15,7 +15,6 @@
 		4CB6B59C1B7D6A90004A7C3E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6B59A1B7D6A90004A7C3E /* LaunchScreen.xib */; };
 		4CB6B5A81B7D6A90004A7C3E /* Dice_Rolling_3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B5A71B7D6A90004A7C3E /* Dice_Rolling_3Tests.m */; };
 		4CB6B5B21B7D7CBF004A7C3E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6B5B11B7D7CBF004A7C3E /* Images.xcassets */; };
-		4CB6B5B51B7D8571004A7C3E /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B5B41B7D8571004A7C3E /* Dice.m */; };
 		4CB6B5B81B7D9346004A7C3E /* DiceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B5B71B7D9346004A7C3E /* DiceHolder.m */; };
 		4CB6B5BB1B7DB441004A7C3E /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6B5BA1B7DB441004A7C3E /* SettingViewController.m */; };
 /* End PBXBuildFile section */
@@ -45,8 +44,6 @@
 		4CB6B5A61B7D6A90004A7C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CB6B5A71B7D6A90004A7C3E /* Dice_Rolling_3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice_Rolling_3Tests.m; sourceTree = "<group>"; };
 		4CB6B5B11B7D7CBF004A7C3E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4CB6B5B31B7D8571004A7C3E /* Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
-		4CB6B5B41B7D8571004A7C3E /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		4CB6B5B61B7D9346004A7C3E /* DiceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiceHolder.h; sourceTree = "<group>"; };
 		4CB6B5B71B7D9346004A7C3E /* DiceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiceHolder.m; sourceTree = "<group>"; };
 		4CB6B5B91B7DB441004A7C3E /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
@@ -103,10 +100,8 @@
 				4CB6B5BA1B7DB441004A7C3E /* SettingViewController.m */,
 				4CB6B59A1B7D6A90004A7C3E /* LaunchScreen.xib */,
 				4CB6B58B1B7D6A90004A7C3E /* Supporting Files */,
-				4CB6B5B31B7D8571004A7C3E /* Dice.h */,
 				4CB6B5B61B7D9346004A7C3E /* DiceHolder.h */,
 				4CB6B5B71B7D9346004A7C3E /* DiceHolder.m */,
-				4CB6B5B41B7D8571004A7C3E /* Dice.m */,
 			);
 			path = Dice_Rolling_3;
 			sourceTree = "<group>";
@@ -240,7 +235,6 @@
 			files = (
 				4CB6B5941B7D6A90004A7C3E /* ViewController.m in Sources */,
 				4CB6B5911B7D6A90004A7C3E /* AppDelegate.m in Sources */,
-				4CB6B5B51B7D8571004A7C3E /* Dice.m in Sources */,
 				4CB6B58E1B7D6A90004A7C3E /* main.m in Sources */,
 				4CB6B5B81B7D9346004A7C3E /* DiceHolder.m in Sources */,
 				4CB6B5BB1B7DB441004A7C3E /* SettingViewController.m in Sources */,

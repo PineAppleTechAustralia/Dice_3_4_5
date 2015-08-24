@@ -23,10 +23,6 @@
 {
     self = [super init];
     if(self){
-        //create an object
-        Dice *dice = [[Dice alloc] init];
-        dice.pColor = m_color;
-        dice.pNumber = m_number;
         
         self.bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:m_color]];
         
